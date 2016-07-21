@@ -71,6 +71,27 @@ Default: `true`
 
 Prettify the output. If true, output has newlines and indentation.
 
+### indentStyle
+
+Type: `string`<br>
+Default: `spaces`
+
+When `pretty` is set to true, indent with either `spaces` or `tabs`.
+
+### indentSpaces
+
+Type: `integer`<br>
+Default: `2`
+
+When `pretty` is set to true and `indentStyle` is set to `spaces`, then indent with this number of spaces.
+
+### indentTabs
+
+Type: `integer`<br>
+Default: `1`
+
+When `pretty` is set to true and `indentStyle` is set to `tabs`, then indent with this number of tabs.
+
 #### filter
 
 Type: `string`<br>
