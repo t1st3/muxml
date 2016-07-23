@@ -153,6 +153,11 @@ Type: `object`<br>
 as described above
 
 
+## Relevant
+
+* [CLI for this module](https://github.com/t1st3/muxml-cli)
+
+
 ## License
 
 MIT © [t1st3](http://tiste.org)
