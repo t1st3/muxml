@@ -1,6 +1,6 @@
 {
   "name": "muxml",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Streaming XML parser and formatter",
   "license": "MIT",
   "repository": "t1st3/muxml",
