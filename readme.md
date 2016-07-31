@@ -155,7 +155,7 @@ as described above
 
 ## Relevant
 
-* [CLI for this module](https://github.com/t1st3/muxml-cli)
+* [muxml-cli](https://github.com/t1st3/muxml-cli) | CLI for this module
 
 
 ## License
