@@ -6,7 +6,7 @@ let pkg = require('./package.json');
 
 let external = Object.keys(pkg.dependencies);
 
-let rc = babelrc();
+let rc = babelrc('src/.babelrc');
 if (process.env.coverage === 'true') {
 	rc.plugins = [
 		'__coverage__'
