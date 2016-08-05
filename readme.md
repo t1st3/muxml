@@ -156,7 +156,7 @@ as described above
 ## Relevant
 
 * [muxml-cli](https://github.com/t1st3/muxml-cli) | CLI for this module
-
+* [gulp-muxml](https://github.com/t1st3/gulp-muxml) | this module as a [`gulp`](http://gulpjs.com/) plugin
 
 ## License
 
