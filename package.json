@@ -21,9 +21,6 @@
     "email": "contact@tiste.org",
     "url": "tiste.org"
   },
-  "bugs": {
-    "url": "https://github.com/t1st3/muxml/issues"
-  },
   "engines": {
     "node": ">=4"
   },
