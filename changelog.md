@@ -1,0 +1,32 @@
+## Change Log
+
+### 0.1.3 (2016/08/09 12:19 +00:00)
+- [afcc6cf](https://github.com/t1st3/muxml/commit/afcc6cf75db706f4c6b118c41295255208a7d6fd) fix: babel/rollup issues (@t1st3)
+- [4e936b1](https://github.com/t1st3/muxml/commit/4e936b15b3c9b7fcac01e083aad5da81a0a2bce6) docs(readme): minor improvements (@t1st3)
+- [bb0eacf](https://github.com/t1st3/muxml/commit/bb0eacf4674f4936b530d7a2bc49fc25a96bc56d) chore(src): remove unused properties (@t1st3)
+- [59bfe7b](https://github.com/t1st3/muxml/commit/59bfe7b47e9f6182670a7d8d0d04a4071f4e1369) docs(readme): add link to grunt-muxml (@t1st3)
+- [cf64117](https://github.com/t1st3/muxml/commit/cf641175be93eb28a1a49f66aceed19122fc9d3d) chore(rollup): make rollup use specific babelrc (@t1st3)
+- [cbd9abb](https://github.com/t1st3/muxml/commit/cbd9abbb342116f5f7cb08cfd5f06ced63dd823c) chore(package): remove moot "bugs" section (@t1st3)
+- [00b50cb](https://github.com/t1st3/muxml/commit/00b50cb66323df0300327b16fe14b525362416b2) chore: specific babel config for src (@t1st3)
+- [062faea](https://github.com/t1st3/muxml/commit/062faea247f17f167bfbe53154bc59ab7ec3dc06) docs(readme): add link to gulp-muxml (@t1st3)
+- [#2](https://github.com/t1st3/muxml/pull/2) chore(package): update mocha to version 3.0.0 (@t1st3)
+- [9aa0552](https://github.com/t1st3/muxml/commit/9aa0552361d95343240ad1ad62e08547932bfa06) chore(package): update mocha to version 3.0.0 (@greenkeeperio-bot)
+- [9ac1c60](https://github.com/t1st3/muxml/commit/9ac1c600b5b8ba42957c61d720438c924821bfdb) docs: minor change for muxml-cli link (@t1st3)
+- [#1](https://github.com/t1st3/muxml/pull/1) Update all dependencies 🌴 (@t1st3)
+- [fd8b3c8](https://github.com/t1st3/muxml/commit/fd8b3c8a6f8bd4f361b81623a5583b47a35f1b02) chore(package): update dependencies (@greenkeeperio-bot)
+
+### 0.1.2 (2016/07/24 11:42 +00:00)
+- [bbe340c](https://github.com/t1st3/muxml/commit/bbe340c6efe7dd817d1de29d06b8a80e3720a6cd) chore: v0.1.2 (@t1st3)
+- [60085d5](https://github.com/t1st3/muxml/commit/60085d56ca1c0d7e16489760e9bebceb8b720394) chore: remove coverage instrumentation from files in dist (@t1st3)
+
+### 0.1.1 (2016/07/24 11:38 +00:00)
+- [8ae1224](https://github.com/t1st3/muxml/commit/8ae1224b4ddde337b8833337dd6d92553a2cb120) chore: v0.1.1 (@t1st3)
+- [a6e170e](https://github.com/t1st3/muxml/commit/a6e170e60210f9683259aeeed50e38cebc0c4403) chore: make travis run coveralls NPM script (@t1st3)
+- [69a1542](https://github.com/t1st3/muxml/commit/69a15426c8692db5c36efd28847f3ab2ac37a7d5) chore: add mocha-lcov-reporter as dev dep (@t1st3)
+- [7990b34](https://github.com/t1st3/muxml/commit/7990b34e9c3a72d009e370480504fa13840583ad) docs: add link to muxml-cli in readme (@t1st3)
+- [0137075](https://github.com/t1st3/muxml/commit/0137075f0a432ec307b7f8d6270a16aac59609f8) docs: add description of indent options in readme (@t1st3)
+- [6d40135](https://github.com/t1st3/muxml/commit/6d40135b53466cd366cca6eccca8238408fe2038) chore: remove node 0.10 and 0.12 from travis matrix (@t1st3)
+
+### 0.1.0 (2016/07/21 12:39 +00:00)
+- [2c3f4fa](https://github.com/t1st3/muxml/commit/2c3f4fa2b3ad66fee1384624f9af212f8efb554d) feat: initial commit, v0.1.0 (@t1st3)
+- [d6fd4b5](https://github.com/t1st3/muxml/commit/d6fd4b59c20cbb2d483a8787ab14361cdb1061e6) Initial commit (@t1st3)
