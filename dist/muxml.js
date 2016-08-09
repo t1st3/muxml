@@ -33,8 +33,6 @@
 
 	var self = {};
 	self.opts = {};
-	self.emitEvents = {};
-	self.saxOptions = {};
 	self.tagFilter = null;
 	self.mustPrint = false;
 	self.level = 0;
