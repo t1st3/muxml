@@ -1,18 +1,17 @@
-// import process from 'process';
 import babel from 'rollup-plugin-babel';
 import babelrc from 'babelrc-rollup';
 
-let pkg = require('./package.json');
+const pkg = require('./package.json');
 
-let external = Object.keys(pkg.dependencies);
+const external = Object.keys(pkg.dependencies);
 
-let rc = babelrc('.babelrc');
+const rc = babelrc('.babelrc');
 rc.exclude = 'node_modules/**';
 
 export default {
 	entry: 'src/index.js',
 	plugins: [babel(babelrc())],
-	external: external,
+	external,
 	targets: [
 		{
 			dest: pkg['jsnext:main'],

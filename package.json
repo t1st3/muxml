@@ -37,7 +37,6 @@
     "coveralls": "cat coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
   "main": "dist/muxml.js",
-  "module": "dist/muxml.mjs",
   "jsnext:main": "dist/muxml.mjs",
   "files": [
     "dist",
@@ -78,5 +77,8 @@
       "lcov",
       "text"
     ]
+  },
+  "xo": {
+    "esnext": true
   }
 }

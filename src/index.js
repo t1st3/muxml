@@ -27,7 +27,7 @@ const defaultOpts = {
 	}
 };
 
-let self = {};
+const self = {};
 self.opts = {};
 self.tagFilter = null;
 self.mustPrint = false;
@@ -35,13 +35,13 @@ self.level = 0;
 self.nestLevel = 0;
 
 let lastChunk = '';
-let decoder = new StringDecoder('utf8');
+const decoder = new StringDecoder('utf8');
 let parser;
 
-let transformStream = function (chunk, enc, cb) {
+const transformStream = function (chunk, enc, cb) {
 	parser = sax.createStream(self.opts.strict, self.opts.saxOptions);
 	lastChunk += decoder.write(chunk);
-	let me = this;
+	const me = this;
 
 	function entityQuotes(str) {
 		return str.replace('"', '&quot;');
@@ -85,7 +85,7 @@ let transformStream = function (chunk, enc, cb) {
 		let printable = '<' + tag.name;
 		if (self.opts.stripAttributes === false) {
 			if (tag.attributes) {
-				for (let i in tag.attributes) {
+				for (const i in tag.attributes) {
 					if (tag.attributes[i]) {
 						printable += ' ' + i + '="';
 						printable += entityQuotes(tag.attributes[i]) + '"';
@@ -169,7 +169,7 @@ let transformStream = function (chunk, enc, cb) {
 	cb();
 };
 
-let endStream = function (cb) {
+const endStream = function (cb) {
 	lastChunk += decoder.end();
 	if (lastChunk.length > 0) {
 		parser.write(lastChunk);
