@@ -95,7 +95,7 @@ var transformStream = function transformStream(chunk, enc, cb) {
 		printable += '>';
 		print(printable);
 		self.level += self.mustPrint ? 1 : 0;
-		me.emit('openTag', tag);
+		me.emit('opentag', tag);
 	};
 
 	parser.onclosetag = function (tag) {
@@ -107,7 +107,7 @@ var transformStream = function transformStream(chunk, enc, cb) {
 				self.mustPrint = false;
 			}
 		}
-		me.emit('closeTag', tag);
+		me.emit('closetag', tag);
 	};
 
 	parser.onattribute = function (attr) {
@@ -122,7 +122,7 @@ var transformStream = function transformStream(chunk, enc, cb) {
 	parser.onopencdata = function () {
 		if (self.opts.stripCdata === false) {
 			print('<![CDATA[');
-			me.emit('openCdata');
+			me.emit('opencdata');
 		}
 	};
 
@@ -138,7 +138,7 @@ var transformStream = function transformStream(chunk, enc, cb) {
 	parser.onclosecdata = function () {
 		if (self.opts.stripCdata === false) {
 			print(']]>');
-			me.emit('closeCdata');
+			me.emit('closecdata');
 		}
 	};
 

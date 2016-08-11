@@ -39,9 +39,9 @@ Suppose a file named `example.xml` containing the follwing XML
 
 ```xml
 <a id="foo">
-	<b>
-		<c>d</c>
-	</b>
+  <b>
+    <c>d</c>
+  </b>
 </a>
 ```
 
@@ -51,11 +51,11 @@ then, `muxml()` return a transform stream that accepts XML strings and emits XML
 const muxml = require('muxml');
 
 fs.createReadStream('example.xml')
-	.pipe(muxml({pretty: false}))
-	.on('data', function (data) {
-		console.log(data);
-		//=> '<b><c>d</c></b>'
-	});
+  .pipe(muxml({pretty: false}))
+  .on('data', function (data) {
+    console.log(data);
+    //=> '<b><c>d</c></b>'
+  });
 ```
 
 ## Options

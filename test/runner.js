@@ -199,9 +199,9 @@ describe('muxml', () => {
 			stripDoctype: false,
 			stripInstruction: false
 		});
-		mux.on('openTag', tag => {
+		mux.on('opentag', tag => {
 			tags.push(tag);
-		}).on('closeTag', tag => {
+		}).on('closetag', tag => {
 			closed.push(tag);
 		}).on('comment', comment => {
 			comments.push(comment);
@@ -209,9 +209,9 @@ describe('muxml', () => {
 			doctypes.push(doctype);
 		}).on('instruction', instruction => {
 			instructions.push(instruction.body);
-		}).on('openCdata', () => {
+		}).on('opencdata', () => {
 			openCdata += 1;
-		}).on('closeCdata', () => {
+		}).on('closecdata', () => {
 			closeCdata += 1;
 		}).on('cdata', text => {
 			cdata = text;
