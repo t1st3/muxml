@@ -4,6 +4,28 @@
   "description": "Streaming XML parser and formatter",
   "license": "MIT",
   "repository": "t1st3/muxml",
+  "author": {
+    "name": "t1st3",
+    "email": "contact@tiste.org",
+    "url": "tiste.org"
+  },
+  "main": "dist/muxml.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "test": "xo src/* test/* rollup.config.js && npm run build && mocha",
+    "prepublish": "npm test",
+    "coverage": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text-lcov npm test",
+    "postcoverage": "npm run build",
+    "precoveralls": "npm run coverage",
+    "coveralls": "cat coverage/lcov.info | ./node_modules/.bin/coveralls"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
   "keywords": [
     "xml",
     "parse",
@@ -15,32 +37,6 @@
     "stream",
     "transform",
     "through"
-  ],
-  "author": {
-    "name": "t1st3",
-    "email": "contact@tiste.org",
-    "url": "tiste.org"
-  },
-  "engines": {
-    "node": ">=4"
-  },
-  "scripts": {
-    "prebuild": "xo src/* test/* rollup.config.js",
-    "build": "rollup -c",
-    "watch": "rollup -c -w",
-    "pretest": "npm run build",
-    "test": "mocha",
-    "prepublish": "npm test",
-    "coverage": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text-lcov npm test",
-    "postcoverage": "npm run build",
-    "precoveralls": "npm run coverage",
-    "coveralls": "cat coverage/lcov.info | ./node_modules/.bin/coveralls"
-  },
-  "main": "dist/muxml.js",
-  "jsnext:main": "dist/muxml.mjs",
-  "files": [
-    "dist",
-    "src"
   ],
   "dependencies": {
     "deep-assign": "^2.0.0",
@@ -61,9 +57,14 @@
     "nyc": "^7.1.0",
     "rollup": "^0.34.7",
     "rollup-plugin-babel": "^2.6.1",
-    "rollup-watch": "^2.4.0",
-    "xo": "^0.16.0"
+    "xo": "*"
   },
+  "clinton": {
+    "rules": {
+      "ava": false
+    }
+  },
+  "jsnext:main": "dist/muxml.mjs",
   "nyc": {
     "include": [
       "src/*.js"
