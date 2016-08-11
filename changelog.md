@@ -1,6 +1,12 @@
 ## Change Log
 
-### 0.1.3 (2016/08/09 12:19 +00:00)
+### 0.2.0 (2016/08/11 11:00 +00:00)
+- [64f1f5c](https://github.com/t1st3/muxml/commit/64f1f5c689d3fc717976bff54b3957f41d90af86) fix: emitted events to have the same names as sax events (@t1st3)
+- [a433de8](https://github.com/t1st3/muxml/commit/a433de87dcdc46971f89804e29f7e89d3ae2d75d) chore: lint project with clinton (@t1st3)
+- [c42138a](https://github.com/t1st3/muxml/commit/c42138aa7e0b61b6c59f847f7385c1eb36e7fdd1) feat: mandatory usage of more ES2015 features (@t1st3)
+
+### 0.1.3 (2016/08/09 12:20 +00:00)
+- [4eb1e5f](https://github.com/t1st3/muxml/commit/4eb1e5fc1ad171285a6539ff4e0f03f6ac04f93c) chore: v0.1.3 (@t1st3)
 - [afcc6cf](https://github.com/t1st3/muxml/commit/afcc6cf75db706f4c6b118c41295255208a7d6fd) fix: babel/rollup issues (@t1st3)
 - [4e936b1](https://github.com/t1st3/muxml/commit/4e936b15b3c9b7fcac01e083aad5da81a0a2bce6) docs(readme): minor improvements (@t1st3)
 - [bb0eacf](https://github.com/t1st3/muxml/commit/bb0eacf4674f4936b530d7a2bc49fc25a96bc56d) chore(src): remove unused properties (@t1st3)
