@@ -4,7 +4,7 @@
 
 `muxml` is a [Transform stream](https://nodejs.org/api/stream.html#stream_duplex_and_transform_streams) that accepts XML strings, and emits small chunks containing individual XML elements.
 
-The parser part of this module is built on [`sax`](https://www.npmjs.com/package/sax).
+The parser part of this module is built on [`sax`](https://www.npmjs.com/package/sax):saxophone:.
 On parsing, the stream is broken-up and reassembled so that each opening/closing tag and each text is a chunk. During this process, sax events are re-emitted and are listenable down the pipeline.
 
 Once XML is parsed, this module can optionally format XML in the following fashions:

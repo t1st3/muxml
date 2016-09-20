@@ -37,6 +37,7 @@
 	self.mustPrint = false;
 	self.level = 0;
 	self.nestLevel = 0;
+	self.isSelfClosing = false;
 
 	var lastChunk = '';
 	var decoder = new string_decoder.StringDecoder('utf8');
@@ -82,6 +83,9 @@
 		}
 
 		parser.onopentag = function (tag) {
+			if (tag.isSelfClosing === true) {
+				self.isSelfClosing = true;
+			}
 			if (tag.name === self.tagFilter) {
 				self.mustPrint = true;
 				self.nestLevel += 1;
@@ -97,6 +101,9 @@
 					}
 				}
 			}
+			if (self.isSelfClosing === true) {
+				printable += '/';
+			}
 			printable += '>';
 			print(printable);
 			self.level += self.mustPrint ? 1 : 0;
@@ -105,13 +112,16 @@
 
 		parser.onclosetag = function (tag) {
 			self.level -= self.mustPrint ? 1 : 0;
-			print('</' + tag + '>');
+			if (self.isSelfClosing === false) {
+				print('</' + tag + '>');
+			}
 			if (tag === self.tagFilter) {
 				self.nestLevel -= 1;
 				if (self.nestLevel === 0) {
 					self.mustPrint = false;
 				}
 			}
+			self.isSelfClosing = false;
 			me.emit('closetag', tag);
 		};
 

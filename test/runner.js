@@ -1,4 +1,3 @@
-
 import {strictEqual, deepEqual} from 'assert';
 import fs from 'fs';
 import concatStream from 'concat-stream';
@@ -21,6 +20,19 @@ describe('muxml', () => {
 		}));
 		const xml = [
 			'<a id="aa">', '<b>', '<c>d</c>', '</b>', '</a>'
+		].join('\n');
+		mux.end(xml);
+	});
+
+	it('streams correct XML with self-closing tag', done => {
+		const expected = '<a id="aa"/>';
+		const mux = muxml({pretty: false});
+		mux.pipe(concatStream({encoding: 'string'}, data => {
+			strictEqual(data, expected);
+			done();
+		}));
+		const xml = [
+			'<a id="aa"/>'
 		].join('\n');
 		mux.end(xml);
 	});

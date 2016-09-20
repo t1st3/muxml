@@ -33,6 +33,7 @@ self.tagFilter = null;
 self.mustPrint = false;
 self.level = 0;
 self.nestLevel = 0;
+self.isSelfClosing = false;
 
 let lastChunk = '';
 const decoder = new StringDecoder('utf8');
@@ -78,6 +79,9 @@ const transformStream = function (chunk, enc, cb) {
 	}
 
 	parser.onopentag = function (tag) {
+		if (tag.isSelfClosing === true) {
+			self.isSelfClosing = true;
+		}
 		if (tag.name === self.tagFilter) {
 			self.mustPrint = true;
 			self.nestLevel += 1;
@@ -93,6 +97,9 @@ const transformStream = function (chunk, enc, cb) {
 				}
 			}
 		}
+		if (self.isSelfClosing === true) {
+			printable += '/';
+		}
 		printable += '>';
 		print(printable);
 		self.level += self.mustPrint ? 1 : 0;
@@ -101,13 +108,16 @@ const transformStream = function (chunk, enc, cb) {
 
 	parser.onclosetag = function (tag) {
 		self.level -= self.mustPrint ? 1 : 0;
-		print('</' + tag + '>');
+		if (self.isSelfClosing === false) {
+			print('</' + tag + '>');
+		}
 		if (tag === self.tagFilter) {
 			self.nestLevel -= 1;
 			if (self.nestLevel === 0) {
 				self.mustPrint = false;
 			}
 		}
+		self.isSelfClosing = false;
 		me.emit('closetag', tag);
 	};
 
