@@ -1,6 +1,22 @@
 ## Change Log
 
-### 0.2.0 (2016/08/11 11:00 +00:00)
+### 0.2.2 (2016/09/21 09:25 +00:00)
+- [488b6c1](https://github.com/t1st3/muxml/commit/488b6c1fae5f44252009ed0bdd4f811846b67a35) chore(package): bump deps (@t1st3)
+- [d959457](https://github.com/t1st3/muxml/commit/d9594574abac58b28f7898024e0b1f183c190c3e) refactor(src): minor tweaks (@t1st3)
+
+### 0.2.1 (2016/09/20 22:06 +00:00)
+- [89c6838](https://github.com/t1st3/muxml/commit/89c6838affcc143fb9136fd63f85bbde5b198a2a) fix: self closing tags (#18) (@t1st3)
+- [#19](https://github.com/t1st3/muxml/pull/19) Update rollup to version 0.36.0 🚀 (@t1st3)
+- [3a469d0](https://github.com/t1st3/muxml/commit/3a469d053d221d4bb11b438d66f9158bc2e60916) chore(package): update rollup to version 0.36.0 (@greenkeeperio-bot)
+- [#16](https://github.com/t1st3/muxml/pull/16) Update rollup to version 0.35.0 🚀 (@t1st3)
+- [3d032f3](https://github.com/t1st3/muxml/commit/3d032f3701a474cc9f859fb5a1eb1d74bb613784) chore(package): update rollup to version 0.35.0 (@greenkeeperio-bot)
+- [#14](https://github.com/t1st3/muxml/pull/14) Update babel-plugin-istanbul to version 2.0.0 🚀 (@t1st3)
+- [#15](https://github.com/t1st3/muxml/pull/15) Update nyc to version 8.1.0 🚀 (@t1st3)
+- [f702d9d](https://github.com/t1st3/muxml/commit/f702d9d7554c7c4d6fc237c36ee3776147991541) chore(package): update nyc to version 8.1.0 (@greenkeeperio-bot)
+- [1c8c214](https://github.com/t1st3/muxml/commit/1c8c2143a7f2b32ebe9b2b9c2222c4de29e550cf) chore(package): update babel-plugin-istanbul to version 2.0.0 (@greenkeeperio-bot)
+
+### 0.2.0 (2016/08/11 11:06 +00:00)
+- [8670e1e](https://github.com/t1st3/muxml/commit/8670e1eb62d41f492681998c83da754197519327) chore: v0.2.0 (@t1st3)
 - [64f1f5c](https://github.com/t1st3/muxml/commit/64f1f5c689d3fc717976bff54b3957f41d90af86) fix: emitted events to have the same names as sax events (@t1st3)
 - [a433de8](https://github.com/t1st3/muxml/commit/a433de87dcdc46971f89804e29f7e89d3ae2d75d) chore: lint project with clinton (@t1st3)
 - [c42138a](https://github.com/t1st3/muxml/commit/c42138aa7e0b61b6c59f847f7385c1eb36e7fdd1) feat: mandatory usage of more ES2015 features (@t1st3)
