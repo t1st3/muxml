@@ -83,7 +83,7 @@
 		}
 
 		parser.onopentag = function (tag) {
-			if (tag.isSelfClosing === true) {
+			if (tag.isSelfClosing) {
 				self.isSelfClosing = true;
 			}
 			if (tag.name === self.tagFilter) {
@@ -101,10 +101,7 @@
 					}
 				}
 			}
-			if (self.isSelfClosing === true) {
-				printable += '/';
-			}
-			printable += '>';
+			printable += self.isSelfClosing ? '/>' : '>';
 			print(printable);
 			self.level += self.mustPrint ? 1 : 0;
 			me.emit('opentag', tag);
@@ -112,7 +109,7 @@
 
 		parser.onclosetag = function (tag) {
 			self.level -= self.mustPrint ? 1 : 0;
-			if (self.isSelfClosing === false) {
+			if (!self.isSelfClosing) {
 				print('</' + tag + '>');
 			}
 			if (tag === self.tagFilter) {
