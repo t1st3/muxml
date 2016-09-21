@@ -183,7 +183,7 @@ var endStream = function endStream(cb) {
 	cb();
 };
 
-function index (opts) {
+var index = function (opts) {
 	self.mustPrint = false;
 	self.tagFilter = opts && opts.tagFilter ? opts.tagFilter : null;
 	if (self.tagFilter === null) {
