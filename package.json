@@ -57,7 +57,7 @@
     "nyc": "^8.3.0",
     "rollup": "^0.36.0",
     "rollup-plugin-babel": "^2.6.1",
-    "xo": "*"
+    "xo": "0.17.0"
   },
   "clinton": {
     "rules": {
