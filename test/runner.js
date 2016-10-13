@@ -1,7 +1,7 @@
 import {strictEqual, deepEqual} from 'assert';
 import fs from 'fs';
 import concatStream from 'concat-stream';
-import muxml from '../dist/muxml.js';
+import muxml from '../dist/muxml';
 
 /* global describe,it */
 
