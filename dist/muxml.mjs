@@ -194,7 +194,7 @@ var index = function (opts) {
 	deepAssign(self.opts, defaultOpts, opts ? opts : {});
 
 	return through(transformStream, endStream);
-}
+};
 
 export default index;
 //# sourceMappingURL=muxml.mjs.map

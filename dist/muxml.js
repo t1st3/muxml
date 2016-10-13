@@ -199,7 +199,7 @@ var index = function (opts) {
 	deepAssign(self.opts, defaultOpts, opts ? opts : {});
 
 	return through(transformStream, endStream);
-}
+};
 
 exports['default'] = index;
 

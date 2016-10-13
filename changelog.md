@@ -1,6 +1,12 @@
 ## Change Log
 
-### 0.2.2 (2016/09/21 09:25 +00:00)
+### 0.2.3 (2016/10/13 18:00 +00:00)
+- [4f3cd08](https://github.com/t1st3/muxml/commit/4f3cd086766724d5522315d25478ca6b0a20871a) test: do not use file extension "js" (@t1st3)
+- [#20](https://github.com/t1st3/muxml/pull/20) Update cross-env to version 3.0.0 🚀 (@t1st3)
+- [a5ca672](https://github.com/t1st3/muxml/commit/a5ca672a9ca0829070d77a1305a987251a3e60a8) chore(package): update cross-env to version 3.0.0 (@greenkeeperio-bot)
+
+### 0.2.2 (2016/09/21 09:26 +00:00)
+- [334e505](https://github.com/t1st3/muxml/commit/334e50571b7df00717e63cca5e4c75a1303b12d6) v0.2.2 (@t1st3)
 - [488b6c1](https://github.com/t1st3/muxml/commit/488b6c1fae5f44252009ed0bdd4f811846b67a35) chore(package): bump deps (@t1st3)
 - [d959457](https://github.com/t1st3/muxml/commit/d9594574abac58b28f7898024e0b1f183c190c3e) refactor(src): minor tweaks (@t1st3)
 
