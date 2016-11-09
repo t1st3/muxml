@@ -24,7 +24,7 @@ Once XML is parsed, this module can optionally format XML in the following fashi
 * in the browser, as global script
 * in the browser, with an AMD loader
 
-Also available as a [gulp](https://github.com/t1st3/gulp-muxml) / [Grunt](https://github.com/t1st3/grunt-muxml) / [Broccoli](https://github.com/t1st3/broccoli-muxml) plugin, or as a [CLI](https://github.com/t1st3/muxml-cli) app.
+Also available as a [gulp](https://github.com/t1st3/gulp-muxml) / [Grunt](https://github.com/t1st3/grunt-muxml) plugin, or as a [CLI](https://github.com/t1st3/muxml-cli) app.
 
 
 ## Install
@@ -45,7 +45,7 @@ Suppose a file named `example.xml` containing the follwing XML
 </a>
 ```
 
-then, `muxml()` return a transform stream that accepts XML strings and emits XML elements as strings
+then, `muxml()` returns a transform stream that accepts XML strings and emits XML elements as strings
 
 ```js
 const muxml = require('muxml');
@@ -161,7 +161,6 @@ as described above
 * [muxml-cli](https://github.com/t1st3/muxml-cli) | CLI for this module
 * [gulp-muxml](https://github.com/t1st3/gulp-muxml) | this module as a [`gulp`](http://gulpjs.com/) plugin
 * [grunt-muxml](https://github.com/t1st3/grunt-muxml) | this module as a [`Grunt`](http://gruntjs.com/) plugin
-* [broccoli-muxml](https://github.com/t1st3/broccoli-muxml) | this module as a [`Broccoli`](http://broccolijs.com/) plugin
 
 
 ## License
