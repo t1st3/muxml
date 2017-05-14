@@ -52,7 +52,7 @@
     "concat-stream": "^1.5.2",
     "coveralls": "^2.11.14",
     "cross-env": "^5.0.0",
-    "mocha": "^3.0.2",
+    "mocha": "^3.4.0",
     "mocha-lcov-reporter": "^1.2.0",
     "nyc": "^10.0.0",
     "rollup": "^0.41.4",
