@@ -1,12 +1,12 @@
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('string_decoder'), require('deep-assign'), require('sax'), require('through2')) :
-	typeof define === 'function' && define.amd ? define('muxml', ['exports', 'string_decoder', 'deep-assign', 'sax', 'through2'], factory) :
-	(factory((global.muxml = global.muxml || {}),global.string_decoder,global.deepAssign,global.sax,global.through));
+	typeof define === 'function' && define.amd ? define(['exports', 'string_decoder', 'deep-assign', 'sax', 'through2'], factory) :
+	(factory((global.muxml = {}),global.string_decoder,global.deepAssign,global.sax,global.through));
 }(this, (function (exports,string_decoder,deepAssign,sax,through) { 'use strict';
 
-deepAssign = 'default' in deepAssign ? deepAssign['default'] : deepAssign;
-sax = 'default' in sax ? sax['default'] : sax;
-through = 'default' in through ? through['default'] : through;
+deepAssign = deepAssign && deepAssign.hasOwnProperty('default') ? deepAssign['default'] : deepAssign;
+sax = sax && sax.hasOwnProperty('default') ? sax['default'] : sax;
+through = through && through.hasOwnProperty('default') ? through['default'] : through;
 
 var defaultOpts = {
 	strict: true,
