@@ -9,25 +9,24 @@ const rc = babelrc('.babelrc');
 rc.exclude = 'node_modules/**';
 
 export default {
-	entry: 'src/index.js',
+	input: 'src/index.js',
 	plugins: [babel(babelrc())],
 	external,
-	targets: [
+	output: [
 		{
-			dest: pkg['jsnext:main'],
+			file: pkg['jsnext:main'],
 			format: 'es',
 			exports: 'named',
-			sourceMap: true,
-			sourceMapFile: pkg['jsnext:main'] + '.map'
+			sourcemap: true,
+			sourcemapFile: pkg['jsnext:main'] + '.map'
 		},
 		{
-			dest: pkg.main,
+			file: pkg.main,
 			format: 'umd',
 			exports: 'named',
-			moduleName: 'muxml',
-			moduleId: 'muxml',
-			sourceMap: true,
-			sourceMapFile: pkg.main + '.map'
+			name: 'muxml',
+			sourcemap: true,
+			sourcemapFile: pkg.main + '.map'
 		}
 	]
 };
