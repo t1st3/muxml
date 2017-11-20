@@ -19,8 +19,8 @@
     "prepublish": "npm test",
     "coverage": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text-lcov npm test",
     "postcoverage": "npm run build",
-    "precoveralls": "npm run coverage",
-    "coveralls": "cat coverage/lcov.info | ./node_modules/.bin/coveralls"
+    "precodecov": "npm run coverage",
+    "codecov": "cat coverage/lcov.info | ./node_modules/.bin/codecov"
   },
   "files": [
     "dist",
@@ -49,8 +49,8 @@
     "babel-preset-es2015": "^6.14.0",
     "babel-register": "^6.14.0",
     "babelrc-rollup": "^3.0.0",
+    "codecov": "^3.0.0",
     "concat-stream": "^1.5.2",
-    "coveralls": "^3.0.0",
     "cross-env": "^5.0.0",
     "mocha": "^4.0.0",
     "mocha-lcov-reporter": "^1.2.0",
