@@ -183,7 +183,7 @@ var endStream = function endStream(cb) {
 	cb();
 };
 
-var index = function (opts) {
+function index (opts) {
 	self.mustPrint = false;
 	self.tagFilter = opts && opts.tagFilter ? opts.tagFilter : null;
 	if (self.tagFilter === null) {
@@ -194,7 +194,7 @@ var index = function (opts) {
 	deepAssign(self.opts, defaultOpts, opts ? opts : {});
 
 	return through(transformStream, endStream);
-};
+}
 
 export default index;
 //# sourceMappingURL=muxml.mjs.map
