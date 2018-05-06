@@ -11,7 +11,7 @@
   },
   "main": "dist/muxml.js",
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   },
   "scripts": {
     "build": "rollup -c",
