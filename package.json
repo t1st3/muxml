@@ -55,7 +55,7 @@
     "mocha": "^5.1.1",
     "mocha-lcov-reporter": "^1.2.0",
     "nyc": "^11.7.1",
-    "rollup": "0.59.0",
+    "rollup": "0.59.1",
     "rollup-plugin-babel": "3.0.4",
     "xo": "^0.21.0"
   },
