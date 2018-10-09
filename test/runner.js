@@ -1,4 +1,4 @@
-import {strictEqual, deepEqual} from 'assert';
+import {strictEqual, deepStrictEqual} from 'assert';
 import fs from 'fs';
 import concatStream from 'concat-stream';
 import muxml from '../dist/muxml';
@@ -19,7 +19,11 @@ describe('muxml', () => {
 			done();
 		}));
 		const xml = [
-			'<a id="aa">', '<b>', '<c>d</c>', '</b>', '</a>'
+			'<a id="aa">',
+			'<b>',
+			'<c>d</c>',
+			'</b>',
+			'</a>'
 		].join('\n');
 		mux.end(xml);
 	});
@@ -45,7 +49,11 @@ describe('muxml', () => {
 			done();
 		}));
 		const xml = [
-			'<a id="aa">', '<b>', '<c>d</c>', '</b>', '</a>'
+			'<a id="aa">',
+			'<b>',
+			'<c>d</c>',
+			'</b>',
+			'</a>'
 		].join('\n');
 		mux.end(xml);
 	});
@@ -70,8 +78,11 @@ describe('muxml', () => {
 			'<?xml foo="blerg" ?>',
 			'<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"',
 			'"http://www.w3.org/TR/html4/strict.dtd">',
-			'<a id="aa">', '<![CDATA[ my-cdata ]]>', '<b>c</b>',
-			'<!-- my-comment -->', '</a>'
+			'<a id="aa">',
+			'<![CDATA[ my-cdata ]]>',
+			'<b>c</b>',
+			'<!-- my-comment -->',
+			'</a>'
 		].join('\n');
 		mux.end(xml);
 	});
@@ -84,8 +95,17 @@ describe('muxml', () => {
 			done();
 		}));
 		const xml = [
-			'<a id="aa">', '<b>', '<a>', '<b>', '<b>', '<c>d</c>', '</b>',
-			'</b>', '</a>', '</b>', '</a>'
+			'<a id="aa">',
+			'<b>',
+			'<a>',
+			'<b>',
+			'<b>',
+			'<c>d</c>',
+			'</b>',
+			'</b>',
+			'</a>',
+			'</b>',
+			'</a>'
 		].join('\n');
 		mux.end(xml);
 	});
@@ -99,9 +119,23 @@ describe('muxml', () => {
 			done();
 		}));
 		const xml = [
-			'<a id="aa">', '<b>', '<c>', '<a>', '<b>', '<c>d</c>', '</b>',
-			'</a>', '</c>', '</b>', '<b>', '<e>f</e>', '</b>', '<g>',
-			'<b attr="foo">h</b>', '</g>', '</a>'
+			'<a id="aa">',
+			'<b>',
+			'<c>',
+			'<a>',
+			'<b>',
+			'<c>d</c>',
+			'</b>',
+			'</a>',
+			'</c>',
+			'</b>',
+			'<b>',
+			'<e>f</e>',
+			'</b>',
+			'<g>',
+			'<b attr="foo">h</b>',
+			'</g>',
+			'</a>'
 		].join('\n');
 		mux.end(xml);
 	});
@@ -230,21 +264,27 @@ describe('muxml', () => {
 		}).on('attribute', attr => {
 			attributes.push(attr);
 		}).on('finish', () => {
-			deepEqual(tags, expected);
-			deepEqual(closed, ['c', 'b', 'a']);
-			deepEqual(attributes, [{name: 'id', value: 'aa'}]);
-			deepEqual(comments, ['my-comment']);
-			deepEqual(doctypes, [' my-doctype="foo"']);
-			deepEqual(instructions, ['foo="blerg" ']);
+			deepStrictEqual(tags, expected);
+			deepStrictEqual(closed, ['c', 'b', 'a']);
+			deepStrictEqual(attributes, [{name: 'id', value: 'aa'}]);
+			deepStrictEqual(comments, ['my-comment']);
+			deepStrictEqual(doctypes, [' my-doctype="foo"']);
+			deepStrictEqual(instructions, ['foo="blerg" ']);
 			strictEqual(openCdata, 1);
 			strictEqual(closeCdata, 1);
 			strictEqual(cdata, ' my-cdata ');
 			done();
 		});
 		const xml = [
-			'<!DOCTYPE my-doctype="foo">', '<?xml foo="blerg" ?>', '<a id="aa">',
-			'<!-- my-comment -->', '<b>', '<c>d</c>',
-			'<![CDATA[ my-cdata ]]>', '</b>', '</a>'
+			'<!DOCTYPE my-doctype="foo">',
+			'<?xml foo="blerg" ?>',
+			'<a id="aa">',
+			'<!-- my-comment -->',
+			'<b>',
+			'<c>d</c>',
+			'<![CDATA[ my-cdata ]]>',
+			'</b>',
+			'</a>'
 		].join('\n');
 		mux.end(xml);
 	});

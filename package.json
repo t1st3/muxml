@@ -55,9 +55,9 @@
     "mocha": "^5.1.1",
     "mocha-lcov-reporter": "^1.2.0",
     "nyc": "^12.0.2",
-    "rollup": "0.65.2",
+    "rollup": "0.66.5",
     "rollup-plugin-babel": "4.0.3",
-    "xo": "^0.21.0"
+    "xo": "^0.23.0"
   },
   "clinton": {
     "rules": {
