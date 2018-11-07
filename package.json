@@ -41,7 +41,7 @@
   "dependencies": {
     "deep-assign": "^2.0.0",
     "sax": "^1.2.1",
-    "through2": "^2.0.1"
+    "through2": "^3.0.0"
   },
   "devDependencies": {
     "babel-plugin-external-helpers": "^6.8.0",
