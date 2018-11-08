@@ -39,7 +39,7 @@
     "through"
   ],
   "dependencies": {
-    "deep-assign": "^2.0.0",
+    "deep-assign": "^3.0.0",
     "sax": "^1.2.1",
     "through2": "^3.0.0"
   },
