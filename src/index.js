@@ -1,4 +1,3 @@
-
 import {StringDecoder} from 'string_decoder';
 import deepAssign from 'deep-assign';
 import sax from 'sax';
@@ -68,6 +67,7 @@ const transformStream = function (chunk, enc, cb) {
 				}
 			}
 		}
+
 		return xml;
 	}
 
@@ -75,6 +75,7 @@ const transformStream = function (chunk, enc, cb) {
 		if (self.opts.pretty === true) {
 			xml += '\n';
 		}
+
 		return xml;
 	}
 
@@ -82,10 +83,12 @@ const transformStream = function (chunk, enc, cb) {
 		if (tag.isSelfClosing) {
 			self.isSelfClosing = true;
 		}
+
 		if (tag.name === self.tagFilter) {
 			self.mustPrint = true;
 			self.nestLevel += 1;
 		}
+
 		let printable = '<' + tag.name;
 		if (self.opts.stripAttributes === false) {
 			if (tag.attributes) {
@@ -97,6 +100,7 @@ const transformStream = function (chunk, enc, cb) {
 				}
 			}
 		}
+
 		printable += (self.isSelfClosing) ? '/>' : '>';
 		print(printable);
 		self.level += self.mustPrint ? 1 : 0;
@@ -108,12 +112,14 @@ const transformStream = function (chunk, enc, cb) {
 		if (!self.isSelfClosing) {
 			print('</' + tag + '>');
 		}
+
 		if (tag === self.tagFilter) {
 			self.nestLevel -= 1;
 			if (self.nestLevel === 0) {
 				self.mustPrint = false;
 			}
 		}
+
 		self.isSelfClosing = false;
 		me.emit('closetag', tag);
 	};
@@ -181,6 +187,7 @@ const endStream = function (cb) {
 	if (lastChunk.length > 0) {
 		parser.write(lastChunk);
 	}
+
 	cb();
 };
 
@@ -190,6 +197,7 @@ export default function (opts) {
 	if (self.tagFilter === null) {
 		self.mustPrint = true;
 	}
+
 	self.level = 0;
 	self.nestLevel = 0;
 	deepAssign(self.opts, defaultOpts, opts ? opts : {});
