@@ -16,7 +16,7 @@
   "scripts": {
     "test": "xo src/* test/* && mocha",
     "prepublish": "npm test",
-    "coverage": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text-lcov npm test",
+    "coverage": "mocha && nyc --reporter=lcov --reporter=text-lcov npm test",
     "precodecov": "npm run coverage",
     "codecov": "cat coverage/lcov.info | ./node_modules/.bin/codecov"
   },
@@ -44,7 +44,6 @@
   "devDependencies": {
     "codecov": "^3.0.1",
     "concat-stream": "^2.0.0",
-    "cross-env": "^5.1.4",
     "mocha": "^6.1.4",
     "mocha-lcov-reporter": "^1.2.0",
     "nyc": "^14.0.0",
