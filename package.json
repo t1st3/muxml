@@ -21,7 +21,6 @@
     "codecov": "cat coverage/lcov.info | ./node_modules/.bin/codecov"
   },
   "files": [
-    "dist",
     "src"
   ],
   "keywords": [
@@ -54,22 +53,14 @@
       "ava": false
     }
   },
-  "jsnext:main": "dist/muxml.mjs",
   "nyc": {
     "include": [
       "src/*.js"
     ],
-    "require": [
-      "babel-register"
-    ],
     "sourceMap": false,
-    "instrument": true,
     "reporter": [
       "lcov",
       "text"
     ]
-  },
-  "xo": {
-    "esnext": true
   }
 }
