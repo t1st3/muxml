@@ -1,7 +1,8 @@
-import {strictEqual, deepStrictEqual} from 'assert';
-import fs from 'fs';
-import concatStream from 'concat-stream';
-import muxml from '../dist/muxml';
+const fs = require('fs');
+const {strictEqual} = require('assert');
+const {deepStrictEqual} = require('assert');
+const concatStream = require('concat-stream');
+const muxml = require('../src');
 
 /* global describe,it */
 

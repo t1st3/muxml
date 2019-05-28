@@ -14,11 +14,9 @@
     "node": ">=6"
   },
   "scripts": {
-    "build": "rollup -c",
-    "test": "xo src/* test/* rollup.config.js && npm run build && mocha",
+    "test": "xo src/* test/* && mocha",
     "prepublish": "npm test",
     "coverage": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text-lcov npm test",
-    "postcoverage": "npm run build",
     "precodecov": "npm run coverage",
     "codecov": "cat coverage/lcov.info | ./node_modules/.bin/codecov"
   },
@@ -44,19 +42,12 @@
     "through2": "^3.0.0"
   },
   "devDependencies": {
-    "babel-plugin-external-helpers": "^6.8.0",
-    "babel-plugin-istanbul": "^5.1.1",
-    "babel-preset-es2015": "^6.14.0",
-    "babel-register": "^6.14.0",
-    "babelrc-rollup": "^3.0.0",
     "codecov": "^3.0.1",
     "concat-stream": "^2.0.0",
     "cross-env": "^5.1.4",
     "mocha": "^6.1.4",
     "mocha-lcov-reporter": "^1.2.0",
     "nyc": "^14.0.0",
-    "rollup": "1.12.4",
-    "rollup-plugin-babel": "^4.3.2",
     "xo": "^0.24.0"
   },
   "clinton": {

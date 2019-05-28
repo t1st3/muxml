@@ -1,7 +1,7 @@
-import {StringDecoder} from 'string_decoder';
-import deepAssign from 'deep-assign';
-import sax from 'sax';
-import through from 'through2';
+const {StringDecoder} = require('string_decoder');
+const deepAssign = require('deep-assign');
+const sax = require('sax');
+const through = require('through2');
 
 const defaultOpts = {
 	strict: true,
@@ -191,7 +191,7 @@ const endStream = function (cb) {
 	cb();
 };
 
-export default function (opts) {
+module.exports = function (opts) {
 	self.mustPrint = false;
 	self.tagFilter = (opts && opts.tagFilter) ? opts.tagFilter : null;
 	if (self.tagFilter === null) {
@@ -203,4 +203,4 @@ export default function (opts) {
 	deepAssign(self.opts, defaultOpts, opts ? opts : {});
 
 	return through(transformStream, endStream);
-}
+};
