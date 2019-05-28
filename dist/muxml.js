@@ -1,8 +1,8 @@
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('string_decoder'), require('deep-assign'), require('sax'), require('through2')) :
 	typeof define === 'function' && define.amd ? define(['exports', 'string_decoder', 'deep-assign', 'sax', 'through2'], factory) :
-	(factory((global.muxml = {}),global.string_decoder,global.deepAssign,global.sax,global.through));
-}(this, (function (exports,string_decoder,deepAssign,sax,through) { 'use strict';
+	(global = global || self, factory(global.muxml = {}, global.string_decoder, global.deepAssign, global.sax, global.through));
+}(this, function (exports, string_decoder, deepAssign, sax, through) { 'use strict';
 
 	deepAssign = deepAssign && deepAssign.hasOwnProperty('default') ? deepAssign['default'] : deepAssign;
 	sax = sax && sax.hasOwnProperty('default') ? sax['default'] : sax;
@@ -205,5 +205,5 @@
 
 	Object.defineProperty(exports, '__esModule', { value: true });
 
-})));
+}));
 //# sourceMappingURL=muxml.js.map
