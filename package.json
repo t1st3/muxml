@@ -1,6 +1,6 @@
 {
   "name": "muxml",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Streaming XML parser and formatter",
   "license": "MIT",
   "repository": "t1st3/muxml",
@@ -11,7 +11,7 @@
   },
   "main": "dist/muxml.js",
   "engines": {
-    "node": ">=6"
+    "node": ">=8"
   },
   "scripts": {
     "test": "xo src/* test/* && mocha",
