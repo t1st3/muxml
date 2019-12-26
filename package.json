@@ -45,7 +45,7 @@
     "concat-stream": "^2.0.0",
     "mocha": "^6.1.4",
     "mocha-lcov-reporter": "^1.2.0",
-    "nyc": "^14.0.0",
+    "nyc": "^15.0.0",
     "xo": "^0.25.3"
   },
   "clinton": {
