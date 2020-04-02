@@ -46,7 +46,7 @@
     "mocha": "^7.0.1",
     "mocha-lcov-reporter": "^1.2.0",
     "nyc": "^15.0.0",
-    "xo": "^0.25.3"
+    "xo": "^0.28.2"
   },
   "clinton": {
     "rules": {
